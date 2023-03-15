@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   first.c                                            :+:      :+:    :+:   */
+/*   first_no_uso.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmota-bu <nmota-bu@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 14:52:01 by nmota-bu          #+#    #+#             */
-/*   Updated: 2023/03/13 12:06:11 by nmota-bu         ###   ########.fr       */
+/*   Updated: 2023/03/15 17:27:26 by nmota-bu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,36 +16,35 @@
 
 #include "push_swap.h"
 
-int partition(int arr[], int low, int high)
+int partition(t_data *data, int low, int high)
 {
-	int pivot;
-	int i;
-	int j;
+	int pivot = data->b.stack[high];
+	int i = low - 1;
 
-	pivot = arr[high];
-	i = (low - 1);
-	j = low;
-	while (j <= high)
+	for (int j = low; j <= high - 1; j++)
 	{
-		if (arr[j] < pivot)
+		if (data->b.stack[j] < pivot)
 		{
 			i++;
-			swap(&arr[i], &arr[j]);
+			swap(&data->b.stack[i], &data->b.stack[j]);
 		}
-		j++;
 	}
-	swap(&arr[i + 1], &arr[high]);
-	return (i + 1);
+
+	swap(&data->b.stack[i + 1], &data->b.stack[high]);
+	i++;
+
+	while (i--)
+		pb(data);
+
+	return i + 1;
 }
 
-void quickSort(int arr[], int low, int high)
+void quickSort(t_data *data, int low, int high)
 {
 	if (low < high)
 	{
-		int pi;
-
-		pi = partition(arr, low, high);
-		quickSort(arr, low, pi - 1);
-		quickSort(arr, pi + 1, high);
+		int pi = partition(data, low, high);
+		quickSort(data, low, pi - 1);
+		quickSort(data, pi + 1, high);
 	}
 }

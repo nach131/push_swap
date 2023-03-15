@@ -211,3 +211,5 @@ Para redirigir la salida de error a un archivo.
 /push_swap $ARG | wc -l
 
 ./push_swap `ruby -e "puts (1..100).to_a.shuffle.join(' ')"`
+
+https://github.com/anolivei/Push_swap42

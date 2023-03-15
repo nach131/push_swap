@@ -6,7 +6,7 @@
 /*   By: nmota-bu <nmota-bu@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 17:25:05 by nmota-bu          #+#    #+#             */
-/*   Updated: 2023/03/15 16:31:10 by nmota-bu         ###   ########.fr       */
+/*   Updated: 2023/03/15 17:30:28 by nmota-bu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,16 +33,12 @@ int main(int argc, char **argv)
 
 	ctrl_num(argc - 1, argv);
 	init_data(&data, argc - 1);
-	// ft_bzero(&data, sizeof(t_data));
-	// data.a.stack = ft_calloc(argc, sizeof(int));
-	// data.b.stack = ft_calloc(argc, sizeof(int));
-	// data.tp.stack = ft_calloc(argc, sizeof(int));
-	// data.size = argc - 1;
-	// data.a.top = -1;
-	// data.b.top = -1;
-	// data.tp.top = -1;
 	add_num(&data, argv);
-	print_stack(data.a);
+
+	// print_stack(data.a);
+	quickSort(data.tp.stack, 0, data.size - 1);
+	print_stack(data.tp);
+
 	ctrl_num_dupl(&data);
 	ctrl_sorted(&data);
 
