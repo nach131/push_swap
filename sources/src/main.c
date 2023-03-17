@@ -6,7 +6,11 @@
 /*   By: nmota-bu <nmota-bu@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 17:25:05 by nmota-bu          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2023/03/15 17:30:28 by nmota-bu         ###   ########.fr       */
+=======
+/*   Updated: 2023/03/15 20:33:57 by nmota-bu         ###   ########.fr       */
+>>>>>>> dd21f697a707dd13039b7d36a74ef5416d439afb
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +38,15 @@ int main(int argc, char **argv)
 	ctrl_num(argc - 1, argv);
 	init_data(&data, argc - 1);
 	add_num(&data, argv);
+<<<<<<< HEAD
 
 	// print_stack(data.a);
 	quickSort(data.tp.stack, 0, data.size - 1);
 	print_stack(data.tp);
 
+=======
+	// print_stack(data.a);
+>>>>>>> dd21f697a707dd13039b7d36a74ef5416d439afb
 	ctrl_num_dupl(&data);
 	ctrl_sorted(&data);
 
