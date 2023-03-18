@@ -6,7 +6,7 @@
 /*   By: nmota-bu <nmota-bu@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 16:47:14 by nmota-bu          #+#    #+#             */
-/*   Updated: 2023/03/16 10:28:42 by nmota-bu         ###   ########.fr       */
+/*   Updated: 2023/03/18 09:55:47 by nmota-bu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,17 +23,18 @@ void rra(t_data *data)
 {
 	int i;
 
-	int last;
+	t_num last;
 	i = data->a.top - 1;
 	if (data->a.top > 0)
 	{
 		last = data->a.stack[data->a.top];
+
 		while (i >= 0)
 		{
-			swap(&data->a.stack[i], &data->a.stack[i + 1]);
+			swap_t(&data->a.stack[i], &data->a.stack[i + 1]);
 			i--;
 		}
-		swap(&last, &data->a.stack[0]);
+		swap_t(&last, &data->a.stack[0]);
 	}
 	ft_printf("rra\n");
 }
@@ -45,17 +46,17 @@ void rrb(t_data *data)
 {
 	int i;
 
-	int last;
+	t_num last;
 	i = data->b.top - 1;
 	if (data->b.top > 0)
 	{
 		last = data->b.stack[data->b.top];
 		while (i >= 0)
 		{
-			swap(&data->b.stack[i], &data->b.stack[i + 1]);
+			swap_t(&data->b.stack[i], &data->b.stack[i + 1]);
 			i--;
 		}
-		swap(&last, &data->b.stack[0]);
+		swap_t(&last, &data->b.stack[0]);
 	}
 	ft_printf("rrb\n");
 }
