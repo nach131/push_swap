@@ -6,7 +6,7 @@
 /*   By: nmota-bu <nmota-bu@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 17:39:48 by nmota-bu          #+#    #+#             */
-/*   Updated: 2023/03/16 23:00:35 by nmota-bu         ###   ########.fr       */
+/*   Updated: 2023/03/18 10:32:51 by nmota-bu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,13 +74,41 @@ t_num push_num(int num, int *top)
 // 			swap_t(&data->b.stack[0], &data->a.stack[0]);
 // 		}
 // 		else
+// 			swap_t(&data->b.stack[0], &data->a.stack[0]);
 
-// 			push(data->a.stack, &data->a.top, data->b.stack[0], data->size);
+// 		// push(data->a.stack, &data->a.top, data->b.stack[0], data->size);
 // 		rb(data);
 // 		data->b.top--;
 // 	}
 // 	ft_printf("pa\n");
 // }
+
+void pa(t_data *data)
+{
+	int i;
+
+	t_num *last;
+	i = data->a.top - 1;
+	if (data->b.top > 0)
+	{
+		last = &data->b.stack[0];
+		while (i >= 0)
+		{
+			swap_t(&data->a.stack[i], &data->a.stack[i + 1]);
+			i--;
+		}
+		data->a.top++;
+		swap_t(last, &data->a.stack[0]);
+		i = data->b.top;
+		// while (i >= 0)
+		// {
+		// 	swap_t(&data->a.stack[i], &data->a.stack[i + 1]);
+		// 	i--;
+		// }
+		// data->b.top--;
+	}
+	ft_printf("pa\n");
+}
 
 // Toma el primer elemento del stack A y lo pone encima del stack B.
 // No hace nada si A está vacío.
