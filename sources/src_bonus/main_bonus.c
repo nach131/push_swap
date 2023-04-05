@@ -6,7 +6,7 @@
 /*   By: nmota-bu <nmota-bu@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 11:45:28 by nmota-bu          #+#    #+#             */
-/*   Updated: 2023/04/01 18:39:03 by nmota-bu         ###   ########.fr       */
+/*   Updated: 2023/04/05 12:55:21 by nmota-bu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,6 @@ void	get_line(t_stack **a, t_stack **b)
 		if (!line)
 			break ;
 		filter(a, b, line);
-		// print_stack((*a), (*b));
 		if (line)
 			free(line);
 	}
