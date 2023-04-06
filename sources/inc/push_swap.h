@@ -6,7 +6,7 @@
 /*   By: nmota-bu <nmota-bu@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/23 16:26:42 by nmota-bu          #+#    #+#             */
-/*   Updated: 2023/03/31 13:02:21 by nmota-bu         ###   ########.fr       */
+/*   Updated: 2023/04/06 23:22:53 by nmota-bu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include "../libft/inc/ft_printf.h"
 # include "../libft/inc/libft.h"
 
+# define ERROR_0 "Error: Missing arguments"
 # define ERROR_1 "Error: Argument is not an integer"
 # define ERROR_2 "Error: Duplicate numbers"
 # define ERROR_3 "Error: Numbers greater than integer"
@@ -112,5 +113,3 @@ void				print_chunk(int n, int **chunk);
 int					last_index(t_stack *stack);
 
 #endif
-
-// if (((*b)->ix <= d->ch[i][MD]) && ((*a)->ix > d->ch[i][ED]))

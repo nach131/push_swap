@@ -6,7 +6,7 @@
 /*   By: nmota-bu <nmota-bu@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 13:37:03 by nmota-bu          #+#    #+#             */
-/*   Updated: 2023/04/05 13:08:54 by nmota-bu         ###   ########.fr       */
+/*   Updated: 2023/04/06 23:33:22 by nmota-bu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,11 @@ void	ctrl_num(int size, char **str)
 	int	i;
 	int	j;
 
+	if (!size)
+	{
+		ft_message(DANGER, ERROR_0);
+		exit(1);
+	}
 	i = 1;
 	while (i <= size)
 	{

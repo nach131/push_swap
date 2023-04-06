@@ -6,7 +6,7 @@
 /*   By: nmota-bu <nmota-bu@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 11:47:02 by nmota-bu          #+#    #+#             */
-/*   Updated: 2023/04/01 18:39:45 by nmota-bu         ###   ########.fr       */
+/*   Updated: 2023/04/06 23:33:19 by nmota-bu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include "../libft/inc/ft_printf.h"
 # include "../libft/inc/libft.h"
 
+# define ERROR_0 "Error: Missing arguments"
 # define ERROR_1 "Error: Argument is not an integer"
 # define ERROR_2 "Error: Duplicate numbers"
 # define ERROR_3 "Error: Numbers greater than integer"
@@ -25,7 +26,7 @@
 # define ERROR_5 "Error: Stack A is not ordered"
 
 # define INFO_1 "Info: It's already sorted"
-# define INFO_2 "Very good stack A is ordered."
+# define INFO_2 "Very good, stack A is ordered."
 
 enum
 {
