@@ -6,7 +6,7 @@
 /*   By: nmota-bu <nmota-bu@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/23 12:56:43 by nmota-bu          #+#    #+#             */
-/*   Updated: 2023/03/30 12:29:48 by nmota-bu         ###   ########.fr       */
+/*   Updated: 2023/04/06 23:04:05 by nmota-bu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 #include "push_swap.h"
 
-void static	sort_top(t_stack **b, t_data *data, int big)
+void static	sort_top(t_stack **a, t_stack **b, t_data *data, int big)
 {
 	while (tp_is_act(data->tp, big - 1))
 	{
@@ -25,12 +25,17 @@ void static	sort_top(t_stack **b, t_data *data, int big)
 	}
 	if (big != (*b)->index)
 	{
-		switch_tp(data->tp, (*b)->index - 1, ON);
-		ra_rb(b, RB);
+		if ((*b)->index == big - 1)
+			pa_pb(a, b, PA);
+		else
+		{
+			switch_tp(data->tp, (*b)->index - 1, ON);
+			ra_rb(b, RB);
+		}
 	}
 }
 
-void static	sort_back(t_stack **b, t_data *data, int big)
+void static	sort_back(t_stack **a, t_stack **b, t_data *data, int big)
 {
 	while (tp_is_act(data->tp, big - 1) && big != (*b)->index)
 	{
@@ -39,8 +44,13 @@ void static	sort_back(t_stack **b, t_data *data, int big)
 	}
 	if (big != (*b)->index)
 	{
-		rra_rrb(b, RRB);
-		switch_tp(data->tp, (*b)->index - 1, ON);
+		if ((*b)->index == big - 1)
+			pa_pb(a, b, PA);
+		else
+		{
+			rra_rrb(b, RRB);
+			switch_tp(data->tp, (*b)->index - 1, ON);
+		}
 	}
 }
 
@@ -71,11 +81,16 @@ void	pop_biggest(t_stack **a, t_stack **b, t_data *data, int n)
 	{
 		big = find_big((*b));
 		if (find_chunk(big, n, data) && big != (*b)->index)
-			sort_top(b, data, big);
+			sort_top(a, b, data, big);
 		else if (!find_chunk(big, n, data) && big != (*b)->index)
-			sort_back(b, data, big);
+			sort_back(a, b, data, big);
 		if (big == (*b)->index)
+		{
 			pa_pb(a, b, PA);
+			if ((*a) && (*a)->next)
+				if ((*a)->index > (*a)->next->index)
+					sa_sb(a, SA);
+		}
 		if ((*b) && !(*b)->next)
 			pa_pb(a, b, PA);
 	}
