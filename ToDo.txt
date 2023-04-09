@@ -4,3 +4,4 @@ len de stack a
 encontrar el siguiente numero, comprobar si esta mitad hacia arriba o mitad hacia abajo 
 asi hacemos ra, o rra
 
+...
