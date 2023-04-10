@@ -6,7 +6,7 @@
 /*   By: nmota-bu <nmota-bu@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 17:25:05 by nmota-bu          #+#    #+#             */
-/*   Updated: 2023/04/06 23:22:58 by nmota-bu         ###   ########.fr       */
+/*   Updated: 2023/04/10 11:26:48 by nmota-bu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,34 @@ void	print_lst(t_stack *num)
 		num = num->next;
 	}
 }
+
+void	print_lst_two(t_stack *a, t_stack *b)
+{
+	t_stack	*tmp_a;
+	t_stack	*tmp_b;
+
+	tmp_a = a;
+	tmp_b = b;
+	ft_printf(GREEN "----A----    ----B----\n");
+	while (tmp_a || tmp_b)
+	{
+		if (tmp_a)
+		{
+			ft_printf(YELLOW "   %d", tmp_a->num);
+			tmp_a = tmp_a->next;
+		}
+		else
+			ft_printf("     ");
+		if (tmp_b)
+		{
+			ft_printf(CYAN "\t\t%d", tmp_b->num);
+			tmp_b = tmp_b->next;
+		}
+		ft_printf("\n");
+	}
+}
+
+//=========================================================================
 
 int	main(int argc, char **argv)
 {

@@ -6,7 +6,7 @@
 /*   By: nmota-bu <nmota-bu@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 11:17:46 by nmota-bu          #+#    #+#             */
-/*   Updated: 2023/03/29 22:43:36 by nmota-bu         ###   ########.fr       */
+/*   Updated: 2023/04/10 17:03:06 by nmota-bu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,24 +45,24 @@ int	find_small(t_stack *stack)
 	return (num);
 }
 
-int	pos_small(t_stack *stack)
-{
-	int	num;
-	int	i;
+// int	pos_small(t_stack *stack)
+// {
+// 	int	num;
+// 	int	i;
 
-	i = 1;
-	num = stack->index;
-	while (stack && stack->next)
-	{
-		if (num > stack->next->index)
-		{
-			num = stack->next->index;
-			i++;
-		}
-		stack = stack->next;
-	}
-	return (i);
-}
+// 	i = 1;
+// 	num = stack->index;
+// 	while (stack && stack->next)
+// 	{
+// 		if (num > stack->next->index)
+// 		{
+// 			num = stack->next->index;
+// 			i++;
+// 		}
+// 		stack = stack->next;
+// 	}
+// 	return (i);
+// }
 
 int	find_big(t_stack *stack)
 {
@@ -90,6 +90,27 @@ int	last_index(t_stack *stack)
 		stack = stack->next;
 	}
 	return (num);
+}
+
+t_stack	*stack_reverse(t_stack *stack)
+{
+	t_stack	*curr;
+	t_stack	*new_head;
+	t_stack	*new_node;
+
+	if (!stack || !stack->next)
+		return (stack);
+	curr = stack;
+	new_head = NULL;
+	while (curr)
+	{
+		new_node = stack_new(curr->num);
+		new_node->index = curr->index;
+		new_node->next = new_head;
+		new_head = new_node;
+		curr = curr->next;
+	}
+	return (new_head);
 }
 
 //=========================================================================

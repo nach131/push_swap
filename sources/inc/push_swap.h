@@ -6,7 +6,7 @@
 /*   By: nmota-bu <nmota-bu@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/23 16:26:42 by nmota-bu          #+#    #+#             */
-/*   Updated: 2023/04/06 23:22:53 by nmota-bu         ###   ########.fr       */
+/*   Updated: 2023/04/10 13:52:27 by nmota-bu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,7 +109,10 @@ void				free_chunk(int **chunk, int chunks);
 //==========Work=======================
 void				print_tp(t_data *data);
 void				print_lst(t_stack *num);
+void				print_lst_two(t_stack *a, t_stack *b);
 void				print_chunk(int n, int **chunk);
 int					last_index(t_stack *stack);
+
+t_stack				*stack_reverse(t_stack *stack);
 
 #endif
