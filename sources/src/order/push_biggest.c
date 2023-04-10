@@ -6,7 +6,7 @@
 /*   By: nmota-bu <nmota-bu@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/26 10:21:05 by nmota-bu          #+#    #+#             */
-/*   Updated: 2023/04/06 23:24:49 by nmota-bu         ###   ########.fr       */
+/*   Updated: 2023/04/10 18:45:00 by nmota-bu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,8 +70,10 @@ void static	sort_chunk_ex(t_stack **a, t_stack **b, t_data *data, int i)
 
 void static	sort_chunk(t_stack **a, t_stack **b, t_data *data, int n)
 {
-	int	i;
+	int		i;
+	t_stack	*tmp;
 
+	tmp = stack_reverse((*a));
 	i = 0;
 	while (i < n)
 	{
@@ -83,6 +85,7 @@ void static	sort_chunk(t_stack **a, t_stack **b, t_data *data, int n)
 			if ((*a))
 				if (((*a)->index > data->chunk[i][END]))
 					ra_rb(a, RA);
+			// clear_stack(tmp);
 		}
 		i++;
 	}

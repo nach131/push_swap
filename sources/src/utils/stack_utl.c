@@ -6,7 +6,7 @@
 /*   By: nmota-bu <nmota-bu@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 11:17:46 by nmota-bu          #+#    #+#             */
-/*   Updated: 2023/04/10 17:03:06 by nmota-bu         ###   ########.fr       */
+/*   Updated: 2023/04/10 17:25:20 by nmota-bu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,25 +44,6 @@ int	find_small(t_stack *stack)
 	}
 	return (num);
 }
-
-// int	pos_small(t_stack *stack)
-// {
-// 	int	num;
-// 	int	i;
-
-// 	i = 1;
-// 	num = stack->index;
-// 	while (stack && stack->next)
-// 	{
-// 		if (num > stack->next->index)
-// 		{
-// 			num = stack->next->index;
-// 			i++;
-// 		}
-// 		stack = stack->next;
-// 	}
-// 	return (i);
-// }
 
 int	find_big(t_stack *stack)
 {
