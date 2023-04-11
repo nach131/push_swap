@@ -6,7 +6,7 @@
 /*   By: nmota-bu <nmota-bu@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 11:45:28 by nmota-bu          #+#    #+#             */
-/*   Updated: 2023/04/09 21:08:17 by nmota-bu         ###   ########.fr       */
+/*   Updated: 2023/04/11 16:48:56 by nmota-bu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@
 #include "../libft/inc/get_next_line.h"
 #include "push_swap_bonus.h"
 
-void	print_lst(t_stack *num)
-{
-	while (num)
-	{
-		printf(CYAN "%d \n", num->num);
-		num = num->next;
-	}
-}
+// void	print_lst(t_stack *num)
+// {
+// 	while (num)
+// 	{
+// 		printf(CYAN "%d \n", num->num);
+// 		num = num->next;
+// 	}
+// }
 
 //=========================================================================
 
@@ -35,6 +35,7 @@ void	print_lst_two(t_stack *a, t_stack *b)
 
 	tmp_a = a;
 	tmp_b = b;
+	system("clear");
 	ft_printf(GREEN "----A----    ----B----\n");
 	while (tmp_a || tmp_b)
 	{
@@ -80,7 +81,6 @@ void	filter(t_stack **a, t_stack **b, char *order)
 		rrr(a, b);
 	else
 		ctrl_order(a, b);
-	system("clear");
 	print_lst_two((*a), (*b));
 }
 
