@@ -1,4 +1,28 @@
-# push_swap
+<h1 align="center">
+  <img  width="120" alt="42logo"  src="https://user-images.githubusercontent.com/19689770/129336866-169b0dc7-ea41-47d4-b50a-d466508031af.png">
+  
+	push_swap
+
+</h1>
+
+ <p align="center">
+<img alt="total-views" src="https://img.shields.io/badge/views-28-blue">
+<img alt="total-clone" src="https://img.shields.io/badge/clone-84-blue">
+<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/nach131/push_swap">
+<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/nach131/push_swap">
+<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/nach131/push_swap">
+<img alt="license-MIT" src="https://img.shields.io/badge/license-MIT-blue">
+</p>
+
+<span align="center">
+
+![visitors](https://visitor-badge.glitch.me/badge?page_id=nach131.push_swap&left_color=green&right_color=blue)
+
+![125](https://github.com/nach131/42Barcelona/blob/main/images/125.png)
+
+
+</span>
+
 
 ## Swap
 
@@ -11,7 +35,7 @@
 
  Intercambia los dos primeros elementos encima del ```stack A```. No hace nada si hay uno o menos elementos.
 
-<img src="https://github.com/nach131/push_swap/blob/Two-Struct/img/sa__swap_a.png" alt="drawing" width="250"/>
+<img src="https://github.com/nach131/push_swap/blob/Two-Struct/img/sa__swap_a.png" alt="drawing" width="150"/>
 
 <br><br/>
 
@@ -19,7 +43,7 @@
 
  Intercambia los dos primeros elementos encima del ```stack B```. No hace nada si hay uno o menos elementos.
 
- <img src="https://github.com/nach131/push_swap/blob/Two-Struct/img/sb__swap_b.png" alt="drawing" width="250"/>
+ <img src="https://github.com/nach131/push_swap/blob/Two-Struct/img/sb__swap_b.png" alt="drawing" width="150"/>
 
 <br><br/>
 
@@ -27,7 +51,7 @@
 
  Intercambia los dos primeros elementos encima del ```stack A``` e intercambia los dos primeros elementos encima del ```stack B```. No hace nada si hay uno o menos elementos.
 
- <img src="https://github.com/nach131/push_swap/blob/Two-Struct/img/ss__swap_a_&_swap_b.png" alt="drawing" width="250"/>
+ <img src="https://github.com/nach131/push_swap/blob/Two-Struct/img/ss__swap_a_&_swap_b.png" alt="drawing" width="150"/>
 
 <br><br/>
 
@@ -44,7 +68,7 @@
 
 Toma el primer elemento del ```stack B``` y lo pone encima del ```stack A```. No hace nada si b está vacío.
 
- <img src="https://github.com/nach131/push_swap/blob/Two-Struct/img/pa__push_b.png" alt="drawing" width="250"/>
+ <img src="https://github.com/nach131/push_swap/blob/Two-Struct/img/pa__push_b.png" alt="drawing" width="150"/>
 
 <br><br/>
 
@@ -52,7 +76,7 @@ Toma el primer elemento del ```stack B``` y lo pone encima del ```stack A```. No
 
 Toma el primer elemento del ```stack A``` y lo pone encima del ```stack B```. No hace nada si b está vacío.
 
- <img src="https://github.com/nach131/push_swap/blob/Two-Struct/img/pb__push_a.png" alt="drawing" width="250"/>
+ <img src="https://github.com/nach131/push_swap/blob/Two-Struct/img/pb__push_a.png" alt="drawing" width="150"/>
 
 <br><br/>
 
@@ -69,7 +93,7 @@ Toma el primer elemento del ```stack A``` y lo pone encima del ```stack B```. No
 
 Desplaza hacia arriba todos los elementos del ```stack A``` una posición, de forma que el primer elemento se convierte en el último.
 
- <img src="https://github.com/nach131/push_swap/blob/Two-Struct/img/ra__rotate_a.png" alt="drawing" width="250"/>
+ <img src="https://github.com/nach131/push_swap/blob/Two-Struct/img/ra__rotate_a.png" alt="drawing" width="150"/>
 
 <br><br/>
 
@@ -77,7 +101,7 @@ Desplaza hacia arriba todos los elementos del ```stack A``` una posición, de f
 
 Desplaza hacia arriba todos los elementos del ```stack B``` una posición, de forma que el primer elemento se convierte en el último.
 
- <img src="https://github.com/nach131/push_swap/blob/Two-Struct/img/rb_rotate_b.png" alt="drawing" width="250"/>
+ <img src="https://github.com/nach131/push_swap/blob/Two-Struct/img/rb_rotate_b.png" alt="drawing" width="150"/>
 
 <br><br/>
 
@@ -85,7 +109,7 @@ Desplaza hacia arriba todos los elementos del ```stack B``` una posición, de f
 
 Desplaza al mismo tiempo todos los elementos del ```stack A``` y del ```stack B``` una posición hacia arriba, de forma que el primer elemento se convierte en el último.
 
- <img src="https://github.com/nach131/push_swap/blob/Two-Struct/img/rr_rotate_a_&&_rotate_b.png" alt="drawing" width="250"/>
+ <img src="https://github.com/nach131/push_swap/blob/Two-Struct/img/rr_rotate_a_&&_rotate_b.png" alt="drawing" width="150"/>
 
 <br><br/>
 
@@ -100,7 +124,7 @@ Desplaza al mismo tiempo todos los elementos del ```stack A``` y del ```stack B`
 
 Desplaza hacia abajo todos los elementos del ```stack A``` una posición, de forma que el último elemento se convierte en el primero.
 
- <img src="https://github.com/nach131/push_swap/blob/Two-Struct/img/rra__reverse_rotate_a.png" alt="drawing" width="250"/>
+ <img src="https://github.com/nach131/push_swap/blob/Two-Struct/img/rra__reverse_rotate_a.png" alt="drawing" width="150"/>
 	
 <br><br/>
 
@@ -109,7 +133,7 @@ Desplaza hacia abajo todos los elementos del ```stack A``` una posición, de fo
 Desplaza hacia abajo todos los elementos del ```stack B```una posición, de forma que el último elemento se convierte en el primero.
 
 
- <img src="https://github.com/nach131/push_swap/blob/Two-Struct/img/rrb__reverse_rotate_b.png" alt="drawing" width="250"/>  
+ <img src="https://github.com/nach131/push_swap/blob/Two-Struct/img/rrb__reverse_rotate_b.png" alt="drawing" width="150"/>  
 	
 <br><br/>
 
@@ -117,7 +141,7 @@ Desplaza hacia abajo todos los elementos del ```stack B```una posición, de for
 	
 Desplaza hacia abajo todos los elementos del ```stack A``` una posición y desplaza hacia abajo todos los elementos del ```stack B```una posición, de forma que el último elemento se convierte en el primero.
 
- <img src="https://github.com/nach131/push_swap/blob/Two-Struct/img/rrr__reverse_rotate_a_&_reverse_rotate_b.png" alt="drawing" width="250"/>
+ <img src="https://github.com/nach131/push_swap/blob/Two-Struct/img/rrr__reverse_rotate_a_&_reverse_rotate_b.png" alt="drawing" width="150"/>
 
 </details>
 
