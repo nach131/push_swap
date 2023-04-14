@@ -9,10 +9,6 @@
 
 <span align="center">
 
-![visitors](https://visitor-badge.glitch.me/badge?page_id=nach131.push_swap&left_color=green&right_color=blue)
-
-![125](https://github.com/nach131/42Barcelona/blob/main/images/125.png)
-
 
 </span>
 
