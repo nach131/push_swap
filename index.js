@@ -18,8 +18,8 @@ async function getData(url){
 }
 
 (async()=>{
-	const views = await getData('https://api.github.com/repos/nach131/get_next_line/traffic/views');
-	const clone = await getData('https://api.github.com/repos/nach131/get_next_line/traffic/clones');
+	const views = await getData('https://api.github.com/repos/nach131/push_swap/traffic/views');
+	const clone = await getData('https://api.github.com/repos/nach131/push_swap/traffic/clones');
 	const MarkdownTemplate = await fs.readFile('./README.md.tpl', { encoding: 'utf-8' })
 
 	// console.log(views,clone)
