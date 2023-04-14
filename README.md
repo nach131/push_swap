@@ -1,9 +1,4 @@
-<h1 align="center">
-  <img  width="120" alt="42logo"  src="https://user-images.githubusercontent.com/19689770/129336866-169b0dc7-ea41-47d4-b50a-d466508031af.png">
-  
-	push_swap
 
-</h1>
 
 
 
